@@ -1,6 +1,6 @@
 # Prolog
 
-#### [Resumen de sintaxis: Prolog](./ResumenProlog)
+#### [Resumen de sintaxis: Prolog](./ResumenProlog.md)
 
 #### Ejercicios de Programación Declarativa(lógica) hechos en Prolog
 

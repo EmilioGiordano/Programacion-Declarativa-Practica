@@ -2,7 +2,7 @@
 ## Hechos
 Los hechos son afirmaciones sobre el mundo. Se utilizan para representar datos y relaciones que siempre se consideran verdaderas.
 Una colección de hechos se conoce como __base de hechos__
-![alt text](image.png)
+![alt text](/img/hecho.png)
 __Ejemplos de hechos:__
 ```prolog
 hombre(carlos).
