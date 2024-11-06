@@ -9,7 +9,17 @@ hombre(carlos).
 le_pertenece(maria, moneda).
 padre(homero, bart).
 ```
-
+#### Hechos anidados o estructuras compuestas
+```prolog
+actividad(juan, deportes([futbol, skate, taekwondo])).
+actividad(juan, ocupaciones([estudiante])).
+```
+##### Consulta
+```prolog
+?- actividad(leandro, X)
+X = deportes([futbol, skate, taekwondo])
+X = ocupaciones([estudiante])
+```
 
 ## Operadores Lógicos
 #### Conjunción (AND)
