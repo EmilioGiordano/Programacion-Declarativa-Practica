@@ -334,12 +334,12 @@ En un negocio se desea armar una oferta para fin de año combinando un artículo
 bazar(fuentes).
 bazar(vasos)
 bazar(juego_de_café).
-perfumería(jabones).
-perfumería(crema).
-perfumería(perfume).
-juguetería(autito).
-juguetería(muñeca).
-juguetería(oso).
+perfumeria(jabones).
+perfumeria(crema).
+perfumeria(perfume).
+perfumeria(autito).
+perfumeria(muñeca).
+perfumeria(oso).
 precio(fuentes, 15).
 precio(vasos, 12).
 precio(juego_de_café, 20).
