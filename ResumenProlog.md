@@ -6,7 +6,7 @@ Una colección de hechos se conoce como __base de hechos__
 __Ejemplos de hechos:__
 ```prolog
 hombre(carlos).
-le_pertenece(maria, moneda).
+le_pertenece(maria, moneda).'
 padre(homero, bart).
 ```
 #### Hechos anidados o estructuras compuestas
