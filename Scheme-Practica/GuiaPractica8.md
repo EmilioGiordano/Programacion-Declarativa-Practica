@@ -187,8 +187,16 @@ __Cuarta llamada__:
 ```scheme
 (sumarLista '(-23 12 23))
 ```
-
-
+#### Extra: Verificar si la lista esta vacia
+```scheme
+(define (verificarLista lista)
+    (if (null? lista)
+      "Vacia"
+      "con elementos"))
+```
+```
+(verificarLista '(1))
+```
 #### 10. Cantidad de elementos de una Lista. 
 Escribir una función que acepte una lista y devuelva la cantidad de elementos de esa lista.
 
