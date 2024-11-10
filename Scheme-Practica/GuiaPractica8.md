@@ -175,6 +175,19 @@ __Tercera llamada__:
 __Cuarta llamada__: 
 - (pertenece 3 '()): La lista está vacía, por lo que devuelve #f
 
+#### Extra: Sumar elementos de una Lista. 
+```scheme
+(define (sumarLista lista)
+  (if (null? lista)                   ; Verificamos si la lista está vacía
+      0                               ; Si es vacía, la suma es 0
+      (+ (car lista)                  ; Si no está vacía, sumamos el primer elemento (car)
+         (sumarLista (cdr lista)))))  ; y llamamos recursivamente con el resto de la lista (cdr)
+```
+
+```scheme
+(sumarLista '(-23 12 23))
+```
+
 
 #### 10. Cantidad de elementos de una Lista. 
 Escribir una función que acepte una lista y devuelva la cantidad de elementos de esa lista.
