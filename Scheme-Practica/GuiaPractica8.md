@@ -206,9 +206,6 @@ __Cuarta llamada__:
 (define (sumarLista lista)
   (if (null? lista)                   ; Verificamos si la lista está vacía
       0                               ; Estructura de datos.
- Almacena serie de términos u otras listas.
- Es una secuencia ordenada.
- Longitud variable.Si es vacía, la suma es 0
       (+ (car lista)                  ; Si no está vacía, sumamos el primer elemento (car)
          (sumarLista (cdr lista)))))  ; y llamamos recursivamente con el resto de la lista (cdr)
 ```
