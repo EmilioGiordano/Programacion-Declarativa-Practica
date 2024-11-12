@@ -130,15 +130,15 @@ multiplo(X,Y):-
 (X mod Y =:= 0), !;
 (Y mod X =:= 0).
 ```
-##### Consulta (sin !)
-```prolog
-?- multiplo(2,4)
-false
-```
 ##### Consulta (con !)
 ```prolog
 ?- multiplo(2,4)
 true
+```
+##### Consulta (sin !)
+```prolog
+?- multiplo(2,4)
+false
 ```
 ### Ejercicio 7
 Desarrollar un predicado ternario cuyos sujetos representan las longitudes de tres segmentos, y que sea verdadero si estos tres segmentos forman triángulo. Recordar que la suma de las longitudes de dos lados cualesquiera de un triángulo siempre debe ser mayor que

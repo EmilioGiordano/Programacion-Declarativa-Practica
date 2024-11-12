@@ -85,3 +85,27 @@ hijo(X, Y) :- padre(Y, X).
 abuelo(X, Z) :- padre(X, Y), padre(Y, Z).
 ```
 `hijo(X, Y)` es verdadero si Y es padre de X, y `abuelo(X, Z)` es verdadero si X es padre de Y y Y es padre de Z.
+
+## Expresiones
+Prolog cuenta con operadores para la unificación y comparación, sea con evaluación o sea simbólica, como los siguientes:
+- `X is Y %unificación con evaluación.`
+- `X = Y %unificación simbólica`
+- `X=:=Y %comparación con evaluación`
+- `X == Y %comparación simbólica.`
+
+```prolog
+?- X is 3+5.
+   X = 8
+
+?- X = 3+5.
+   X = 3+5
+
+?- 3+5 =:= 2+6.
+   yes
+
+?- 3+5 == 2+6.
+   no
+
+?- 3+5 == 3+5.
+   yes
+```
