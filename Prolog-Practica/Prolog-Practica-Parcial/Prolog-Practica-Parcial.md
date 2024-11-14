@@ -42,9 +42,10 @@ productoConMasDeNStock(Producto, N) :-
     stock(Producto, Stock),
     Stock >= N.
 
+
 productoConMenosDeNStock(Producto, N) :-
     stock(Producto, Stock),
-    Stock < N.z
+    Stock < N.
 ```
 
 ##### Consulta

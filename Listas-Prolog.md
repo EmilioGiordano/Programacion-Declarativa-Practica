@@ -33,3 +33,13 @@ longitud([_|B], X):- longitud(B, N1), X is N1 + 1.
 longitud([1,2, [a]], A)
 A = 3
 ```
+##### Concatenar dos listas y devolver una tercera.
+```prolog
+concatenar([], L, L). % Caso base: si la primera lista es vacía, el resultado es la segunda lista.
+concatenar([X|Resto], L, [X|Resultado]) :-
+    concatenar(Resto, L, Resultado). % Caso recursivo: agrega el primer elemento de la primera lista a Resultado y llama recursivamente.
+```
+```prolog
+?- concatenar([a1, a2, a3], [b1, b2, b3], Resultado).
+Resultado = [a1, a2, a3, b1, b2, b3]
+```
