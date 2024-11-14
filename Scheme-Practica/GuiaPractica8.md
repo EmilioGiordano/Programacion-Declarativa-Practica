@@ -1,5 +1,24 @@
 Programación funcional – Decisiones y recursión 
-1. Definir una función que reciba un número y devuelva verdadero si el mismo es par
+
+# Índice
+
+### Decisiones
+- [1. Definir una función que reciba un número y devuelva verdadero si el mismo es par](#1-definir-una-función-que-reciba-un-número-y-devuelva-verdadero-si-el-mismo-es-par)
+- [2. Definir una función que acepta un número y devuelve verdadero si dicho número es divisible por seis](#2-definir-una-función-que-acepta-un-número-y-devuelve-verdadero-si-dicho-número-es-divisible-por-seis)
+- [3. Definir una función que reciba dos números y devuelva el mayor de ambos](#3-definir-una-función-que-reciba-dos-números-y-devuelva-el-mayor-de-ambos)
+- [4. Definir una función que reciba dos números y devuelva verdadero si el segundo es múltiplo del primero](#4-definir-una-función-que-reciba-dos-números-y-devuelva-verdadero-si-el-segundo-es-múltiplo-del-primero)
+- [5. Definir una función que reciba dos números y devuelva verdadero si alguno de ellos es múltiplo del otro](#5-definir-una-función-que-reciba-dos-números-y-devuelva-verdadero-si-alguno-de-ellos-es-múltiplo-del-otro)
+- [6. Definir una función que reciba tres números y devuelva verdadero si los tres números son iguales](#6-definir-una-función-que-reciba-tres-números-y-devuelva-verdadero-si-los-tres-números-son-iguales)
+- [7. Definir una función que acepta tres números y devuelva verdadero si dos de ellos sin iguales](#7-definir-una-función-que-acepta-tres-números-y-devuelva-verdadero-si-dos-de-ellos-sin-iguales)
+- [8. Definir una función que acepte la cantidad de piezas producidas y defectuosas y devuelva el puntaje que corresponda](#8-definir-una-función-que-acepte-la-cantidad-de-piezas-producidas-y-defectuosas-y-devuelva-el-puntaje-que-corresponda)
+
+### Listas recursivas
+- [9. ¿Elemento pertenece a una lista?](#9-¿elemento-pertenece-a-una-lista)
+- [10. Cantidad de elementos de una Lista](#10-cantidad-de-elementos-de-una-lista)
+- [11. Sumatoria de una lista](#11-sumatoria-de-una-lista)
+
+### Decisiones
+#### 1. Definir una función que reciba un número y devuelva verdadero si el mismo es par
 
 ```scheme
 (define (esPar x)
@@ -15,7 +34,7 @@ Programación funcional – Decisiones y recursión
 (esPar 7)
 ```
 
-2. Definir una función que acepta un número y devuelve verdadero si dicho número es divisible  por seis. 
+#### 2. Definir una función que acepta un número y devuelve verdadero si dicho número es divisible  por seis
 
 ```scheme
 (define (divisiblePorSeis x)   
@@ -28,29 +47,34 @@ Output:#f
 Output:#t
 ```
 
-3. Definir una función que reciba dos números y devuelva el mayor de ambos.
+#### 3. Definir una función que reciba dos números y devuelva el mayor de ambos
 ```scheme
-(define (mayor x y) (if (> x y) x y))
+(define (mayor x y) 
+  (if (> x y) x y)
+)
 ```
 ```scheme
 (mayor 10 5)
 Output: 10
 ```
-4. Definir una función que reciba dos números y devuelva verdadero si el segundo es múltiplo del primero. 
+#### 4. Definir una función que reciba dos números y devuelva verdadero si el segundo es múltiplo del primero
 ```scheme
 (define (multiplo x y)
-  (= (remainder x y) 0))
+  (= (remainder x y) 0)
+)
 ```
 `(remainder x y)` devuelve el valor del residuo que queda después de dividir x entre y.
 ###### 10 / 5 = 2. Residuo 0. Es multiplo
 ###### 10 / 3 = 3. Residuo 1. No es multiplo
 
-5. Definir una función que reciba dos números y devuelva verdadero si alguno de ellos es  múltiplo del otro. 
+#### 5. Definir una función que reciba dos números y devuelva verdadero si alguno de ellos es  múltiplo del otro
 
 ```scheme
 (define (multiplo x y)
-    (or(= (remainder x y) 0)
-    (= (remainder y x) 0)))
+    (or (= (remainder x y) 0)
+        (= (remainder y x) 0)
+    )
+)
 ```
 
 ```scheme
@@ -64,14 +88,15 @@ Output: #f
 Output: #f
 ```
 
-6. Definir una función que reciba tres números y devuelva verdadero si los tres números son  iguales. 
+#### 6. Definir una función que reciba tres números y devuelva verdadero si los tres números son  iguales
 ```scheme
 (define (iguales x y z)
   (and
     (= x y)
     (= x z)
     (= z y)
-  ))
+  )
+)
 ```
 ```scheme
 (iguales 10 10 10)
@@ -79,15 +104,15 @@ Output: #t
 (iguales 101 10 10)
 Output: #f
 ```
-
-7. Definir una función que acepta tres números y devuelva verdadero si dos de ellos sin iguales.
+#### 7. Definir una función que acepta tres números y devuelva verdadero si dos de ellos sin iguales
 ```scheme
 (define (iguales x y z)
   (or
     (= x y)
     (= x z)
     (= z y)
-  ))
+  )
+)
 ```
 ```scheme
 (iguales 10 11 11)
@@ -96,7 +121,7 @@ Output: #t
 Output: #f
 ```
 
-8. En una fábrica, la eficiencia de una máquina se calcula en función de las piezas producidas, por una parte, y de las piezas defectuosas por la otra.
+#### 8. En una fábrica, la eficiencia de una máquina se calcula en función de las piezas producidas, por una parte, y de las piezas defectuosas por la otra
 __Las condiciones son las siguientes:__ 
 - Producción mínima: 1000 piezas. 
 - Máximo de piezas defectuosas: 20 
@@ -130,6 +155,13 @@ Output: "Puntaje 3."
 (puntaje 1001 19)
 Output: "Puntaje 4."
 ```
+
+### Listas recursivas
+- Estructura de datos. 
+- Almacena serie de términos u otras listas.
+- Es una secuencia ordenada.
+- Longitud variable.Se compone de cabeza y cola [CABEZA | COLA].
+![Listas en Prog  Declarativa](https://github.com/user-attachments/assets/372dbc66-a10b-4796-9a0c-61100bd3475b)
 
 #### 9. ¿Elemento pertenece a una lista? 
 Escribir una función que acepte un elemento y una lista, y devuelva verdadero si el elemento  pertenece a la lista. 
@@ -175,8 +207,29 @@ __Tercera llamada__:
 __Cuarta llamada__: 
 - (pertenece 3 '()): La lista está vacía, por lo que devuelve #f
 
+#### Extra: Sumar elementos de una lista
+```scheme
+(define (sumarLista lista)
+  (if (null? lista)                   ; Verificamos si la lista está vacía
+      0                               ; Estructura de datos.
+      (+ (car lista)                  ; Si no está vacía, sumamos el primer elemento (car)
+         (sumarLista (cdr lista)))))  ; y llamamos recursivamente con el resto de la lista (cdr)
+```
 
-#### 10. Cantidad de elementos de una Lista. 
+```scheme
+(sumarLista '(-23 12 23))
+```
+#### Extra: Verificar si la lista esta vacia
+```scheme
+(define (verificarLista lista)
+    (if (null? lista)
+      "Vacia"
+      "con elementos"))
+```
+```
+(verificarLista '(1))
+```
+#### 10. Cantidad de elementos de una lista
 Escribir una función que acepte una lista y devuelva la cantidad de elementos de esa lista.
 
 Alternativa 1:
@@ -193,7 +246,7 @@ Alternativa 1:
 (cantidad '(1 2 3 4 5 6  8 9) 0)
 Output: 8
 ```
-#### 11. Sumatoria de una lista.
+#### 11. Sumatoria de una lista
 Escribir una función que acepte una lista numérica y devuelva la sumatoria de la misma. 
 
 ```scheme
