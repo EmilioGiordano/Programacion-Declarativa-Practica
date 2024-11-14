@@ -1,4 +1,17 @@
-# Resumen de Prolog: Sintaxis
+# Programación lógica: Sintaxis de Prolog.
+
+- [Hechos](#hechos)
+   - [Hechos anidados o estructuras compuestas](#hechos-anidados-o-estructuras-compuestas)
+- [Operadores Lógicos](#operadores-lógicos)
+   - [Conjunción (AND)](#conjunción-and)
+   - [Disyunción](#disyunción-or)
+   - [Negación](#negación)
+- [Preguntas](#preguntas)
+   - [Preguntas sin variable](#preguntas-sin-variable)
+   - [Preguntas con variable](#preguntas-con-variable)
+- [Reglas](#reglas)
+- [Expresiones](#expresiones)
+
 ## Hechos
 Los hechos son afirmaciones sobre el mundo. Se utilizan para representar datos y relaciones que siempre se consideran verdaderas.
 Una colección de hechos se conoce como __base de hechos__
@@ -16,7 +29,7 @@ actividad(juan, ocupaciones([estudiante])).
 ```
 ##### Consulta
 ```prolog
-?- actividad(leandro, X)
+?- actividad(juan, X)
 X = deportes([futbol, skate, taekwondo])
 X = ocupaciones([estudiante])
 ```
@@ -37,7 +50,7 @@ contento(X) :- juega(X, futbol) ; juega(X, baloncesto).
 `X está contento` __si__ `X juega al futbol` __o__ `X juega al baloncesto`
 
 #### Negación
-Representada por `+`, que significa "no es cierto que".
+Representada por `\+`, que significa "no es cierto que".
 ```prolog
 no_tieneHijos(X) :- \+ padre(X, _).
 ```
@@ -54,26 +67,35 @@ le_gusta(maria, libro).
 le_gusta(juan, libro).
 le_gusta(juan, Italia).
 ```
-Preguntas:
+Preguntas/consultas:
 ```prolog
-?-le_gusta(juan, dinero). Rta: false
-?-le_gusta(juan, maria). Rta: true
+?-le_gusta(juan, dinero). 
+false
+
+?-le_gusta(juan, maria). 
+true
 ```
 #### Preguntas con variable
-Su respuesta es `objeto que cumple el objetivo/false`
-Preguntas:
+Su respuesta es `el objeto que cumple el objetivo o false`
+Preguntas/consultas:
 ```prolog
-% ¿Qué le gusta a juan?
-?-le_gusta(juan, X).
-Rta: X = pescado; X = maria; X = libro; X = Italia.
+% Consulta: ¿Qué le gusta a juan?
+?- le_gusta(juan, X)
+% Respuesta: 
+X = pescado
+X = maria
+X = libro
+X = italia
 
-% ¿A qué le gusta maria?
+% Consulta: ¿A qué le gusta maria?
 ?-le_gusta(X, maria).
-Rta: X = juan
+% Respuesta: 
+X = juan
 
-% ¿Qué le gusta a Maria & a Juan?
+% Consulta: ¿Qué le gusta a Maria & a Juan?
 ?-le_gusta(maria, X), le_gusta(juan, X).
-Rta: X = libro.
+% Respuesta:
+X = libro.
 ```
 
 
@@ -84,7 +106,8 @@ En Prolog, el operador `:-` se usa para expresar "si".
 hijo(X, Y) :- padre(Y, X).
 abuelo(X, Z) :- padre(X, Y), padre(Y, Z).
 ```
-`hijo(X, Y)` es verdadero si Y es padre de X, y `abuelo(X, Z)` es verdadero si X es padre de Y y Y es padre de Z.
+`hijo(X, Y)` es verdadero si Y es padre de X.
+`abuelo(X, Z)` es verdadero si X es padre de Y y Y es padre de Z.
 
 ## Expresiones
 Prolog cuenta con operadores para la unificación y comparación, sea con evaluación o sea simbólica, como los siguientes:
