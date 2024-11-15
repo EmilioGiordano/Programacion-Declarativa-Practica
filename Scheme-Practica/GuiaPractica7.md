@@ -197,8 +197,8 @@ __Consulta__
 ```scheme
 (cociente-residuo 10 2)
 Output:
-Cociente: 5
-Resto: 0
+  Cociente: 5
+  Resto: 0
 ```
 
 ### Ejercicio 14: Segundos, minutos y horas.
@@ -221,31 +221,96 @@ Output:
 Definir una función que acepte la cantidad de varones y mujeres que hay en un recinto, y  devuelva una lista con el porcentaje de varones y mujeres.
 __Función__
 ```scheme
+(define (total x y)
+  (+ x y))
+; ------------------------------------------------ ;
+(define (porcentaje-varones-mujeres varones mujeres)
+  (let ((total (total varones mujeres)))
+    (list 
+      (/ (* varones 100.0) total) 
+      (/ (* mujeres 100.0) total)
+    )
+  )
+)
 ```
 __Consulta__
 ```scheme
+(porcentaje-varones-mujeres 55 45)
+Output: '(55.0 45.0)
+; ------------------------------------------ ;
+(porcentaje-varones-mujeres 34 21)
+Output: '(61.81818181818182 38.18181818181818)
 ```
 ### Ejercicio 16: 
 Utilizando las expresiones descriptas anteriormente, definir la función pasaje, que reciba  una medida en centímetros, y retorne una lista con esa medida expresada en pulgadas,  pies y yardas.
 __Función__
+`let` permite crear asignaciones locales de expresiones a identificadores.
 ```scheme
+(define (pasaje cm)
+  (let (
+        (pulgadas (/ cm 2.54))
+        (pies (/ cm 30.48))
+        (yardas (/ cm 91.44))
+        )
+    (list pulgadas pies yardas)
+  )
+)
 ```
 __Consulta__
 ```scheme
+(pasaje 100000)
+Output: '(39370.07874015748 3280.839895013123 1093.6132983377079)
 ```
 ### Ejercicio 17: Doble 
 Definir una función llamada doblar que, dada una lista de 3 números, devuelve el doble de su primera componente.
 __Función__
 ```scheme
+(define (doble-primer-elemento lista)
+  (if (null? lista)
+    0
+    (* (car lista) 2)
+  )
+)
 ```
 __Consulta__
+
 ```scheme
+(doble-primer-elemento '(13 10 23))
+Output: 26
 ```
+
 ### Ejercicio 18: Producto por tres
 Definir una función llamada producto_por_tres que dada una lista de 3 números devuelva otra lista con los mismos multiplicados por 3.
 __Función__
+
 ```scheme
+(define (producto_por_tres lista)
+  (if (null? lista)
+      lista
+      (cons (* (car lista) 3) (producto_por_tres (cdr lista) ) )
+  )
+)
 ```
+
 __Consulta__
 ```scheme
+(producto_por_tres '(2 4 6))
+Output: '(6 12 18)
+```
+
+__Función__
+Alternativa pasando 2 listas
+```scheme
+ (define (producto_por_tres lista1 lista2) 
+  (if (null? lista1) 
+      lista2 
+      (cons (* (car lista1) 3) (producto_por_tres (cdr lista1) lista2) ) 
+  ) 
+) 
+```
+
+__Consulta__
+```scheme
+(producto_por_tres3 '(2 4 6) '())
+Output: '(6 12 18)
 ```
