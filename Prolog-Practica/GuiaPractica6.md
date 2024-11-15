@@ -2,40 +2,21 @@
 
 - [Ejemplo: Factorial](#ejemplo-factorial)
 - [Ejercicio 1: Cadena de progenitores](#ejercicio-1-cadena-de-progenitores)
-    - [Hechos](#hechos)
-    - [Predicado](#predicado)
-    - [Consulta](#consulta)
 - [Ejercicio 2: MCD](#ejercicio-2-mcd)
-    - [Predicado](#predicado-1)
-    - [Consulta](#consulta-1)
 - [Ejercicio 3: Fibonacci](#ejercicio-3-fibonacci)
-    - [Predicado](#predicado-2)
-    - [Consulta](#consulta-2)
 - [Ejercicio 4: Ordenar una lista de dos elementos de menor a mayor](#ejercicio-4-ordenar-una-lista-de-dos-elementos-de-menor-a-mayor)
-    - [Predicado](#predicado-3)
-    - [Consulta](#consulta-3)
 - [Ejercicio 5: Cantidad de elementos de una lista](#ejercicio-5-cantidad-de-elementos-de-una-lista)
-    - [Predicado](#predicado-4)
-    - [Consulta](#consulta-4)
 - [Ejercicio 6: Cantidad de números reales de una lista](#ejercicio-6-cantidad-de-números-reales-de-una-lista)
-    - [Predicado](#predicado-5)
-    - [Consulta](#consulta-5)
 - [Ejercicio 7: Suma de elementos de una lista](#ejercicio-7-suma-de-elementos-de-una-lista)
-    - [Predicado](#predicado-6)
-    - [Consulta](#consulta-6)
 - [Ejercicio 8: Lista ordenada creciente](#ejercicio-8-lista-ordenada-creciente)
-    - [Consulta](#consulta-7)
+
 - [Ejercicio 9: Último elemento de una lista](#ejercicio-9-último-elemento-de-una-lista)
 - [Ejercicio 10: Lista subconjunto de otra lista](#ejercicio-10-lista-subconjunto-de-otra-lista)
-        - [Predicado](#predicado-7)
-    - [Consulta](#consulta-8)
+
 - [Ejercicio 11: Concatenación de listas(sin usar predicado append)](#ejercicio-11-concatenación-de-listassin-usar-predicado-append)
 - [Ejercicio 12: Lista rotada a la izquierda](#ejercicio-12-lista-rotada-a-la-izquierda)
-    - [Predicado](#predicado-8)
-    - [Consulta](#consulta-9)
+
 - [Ejercicio 13: Lista rotada a la izquierda N veces](#ejercicio-13-lista-rotada-a-la-izquierda-n-veces)
-    - [Predicado](#predicado-9)
-    - [Consulta](#consulta-10)
 
 ### Ejemplo: Factorial 
 ```prolog
