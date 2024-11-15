@@ -60,7 +60,7 @@ __Función__
 (require math)
 (define (circunferencia x)
   (* pi(* x 2))
-  )
+)
 ```
 __Consulta__
 ```scheme
@@ -119,12 +119,14 @@ Output: 100
 Definir una función para ingresarle la base y la altura de un triángulo, y devuelva el valor del área.
 __Función__
 ```scheme
-(areaTriangulo 12 15)
+(define (areaTriangulo base altura)
+  (/ (* altura base) 2)
+)
 ```
 __Consulta__
 ```scheme
-(areaTriangulo 12 15)
-Output: 90.0
+(areaTriangulo 8 5)
+Output: 20
 ```
 ### Ejercicio 10: Hipotenusa
 La relación entre los lados (a,b) de un triángulo y la hipotenusa viene dada por la fórmula `a2 + b2 = h2`. Definir una función para que, dadas las longitudes de los lados, calcule y devuelva la hipotenusa.

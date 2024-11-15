@@ -12,4 +12,4 @@
 Ejercicios de Programación Funcional hechos en Scheme
 
 #### [Trabajo práctico 7: Introducción a Programación Funcional](./Scheme-Practica/GuiaPractica7.md)
-
+#### [Trabajo práctico 8: Recursión y Listas en Scheme/Racket](./Scheme-Practica/GuiaPractica8.md)
