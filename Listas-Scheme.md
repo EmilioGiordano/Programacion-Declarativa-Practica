@@ -54,10 +54,10 @@ Esta resolución permite hacer la sumatoria de una lista, en caso de que la otra
   (if (and (null? lista)(null? lista2))
     suma
     (if (null? lista)
-      (sumatoria '() (cdr lista2)(+ suma (car lista2) ) )
+      (sumatoria '() (cdr lista2) (+ suma (car lista2) ) )
       (if (null? lista2)
-        (sumatoria (cdr lista) '()(+ suma (car lista) ) )
-        (sumatoria (cdr lista) (cdr lista2) (+ suma (+ (car lista) (car lista2))))
+        (sumatoria (cdr lista) '() (+ suma (car lista) ) )
+        (sumatoria (cdr lista) (cdr lista2) (+ suma (+ (car lista) (car lista2) ) ) )
       )
     )
   )
