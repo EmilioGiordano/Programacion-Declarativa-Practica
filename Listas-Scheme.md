@@ -3,6 +3,8 @@
 #### Índice
 - [Función Cons](#función-cons)
 - [Agregar elemento a una lista](#agregar-elemento-a-una-lista)
+- [Sumatoria de una lista](#sumatoria-de-una-lista)
+- [Sumatoria de dos listas](#sumatoria-de-dos-listas)
 - [Eliminar elemento de la lista](#eliminar-elemento-de-la-lista)
 - [Quitar todos los elementos N de una lista](#quitar-todas-las-apariciones-de-un-elemento)
 - [Concatenar listas sin Append](#concatenar-listas-sin-append)
@@ -29,6 +31,46 @@ El resultado es la lista `(1 2 3 4)`.
 Output: '(0 1 2 3)
 ```
 
+##### Sumatoria de una lista
+```scheme
+(define (sumatoria lista suma) 
+  (if (null? lista) 
+    (display suma) 
+    (sumatoria  
+      (cdr lista)(+ suma (car lista)) 
+    ) 
+  ) 
+)
+```
+```scheme
+(sumatoria '(1 2 10 ) 0) 
+Output: 13
+```
+
+##### Sumatoria de dos listas
+Esta resolución permite hacer la sumatoria de una lista, en caso de que la otra esté vacía, y de ambas en caso de que contengan elementos
+```scheme
+(define (sumatoria lista lista2 suma) 
+  (if (and (null? lista)(null? lista2))
+    suma
+    (if (null? lista)
+      (sumatoria '() (cdr lista2)(+ suma (car lista2) ) )
+      (if (null? lista2)
+        (sumatoria (cdr lista) '()(+ suma (car lista) ) )
+        (sumatoria (cdr lista) (cdr lista2) (+ suma (+ (car lista) (car lista2))))
+      )
+    )
+  )
+)
+```
+```scheme
+(sumatoria '(2 2 2 2) '(1 3 2) 0)
+Output: 14
+(sumatoria '() '(1 3 2) 0)
+Output: 6
+(sumatoria '(1 3 2) '() 0)
+Output: 6
+```
 ##### Eliminar elemento de la lista
 ```scheme
 (define (eliminar-primero elem lista)
