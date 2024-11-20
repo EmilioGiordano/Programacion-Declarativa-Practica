@@ -6,7 +6,7 @@
 - [Sumatoria de una lista](#sumatoria-de-una-lista)
 - [Sumatoria de dos listas](#sumatoria-de-dos-listas)
 - [Eliminar elemento de la lista](#eliminar-elemento-de-la-lista)
-- [Quitar todos los elementos N de una lista](#quitar-todas-las-apariciones-de-un-elemento)
+- [Eliminar todas las apariciones de un elemento de una lista](#eliminar-todas-las-apariciones-de-un-elemento-de-una-lista)
 - [Concatenar listas sin Append](#concatenar-listas-sin-append)
 - [Longitud de una lista](#longitud-de-una-lista)
 - [Invertir lista](#invertir-lista)
@@ -135,18 +135,10 @@ Para la lista `(1 2 3 2 4)` y `elem = 2`:
 
 "Construir" significa formar una nueva lista.
 
-
-
 Explicación: 
 1. Caso base: Si la lista está vacía `(null? lista)`, retorna una lista vacía `'()`.
 2. Coincidencia: Sino, si el primer elemento de la lista `(car lista)` es igual al elemento buscado `(equal? elem (car lista))`, no lo incluye y sigue procesando el resto de la lista `(eliminar-todos elem (cdr lista))`.
 3. Recursión: Si no hay coincidencia, construye una nueva lista incluyendo el elemento actual `(cons (car lista) ...)` y sigue recursivamente con el resto de la lista.
-
-
-
-
-
-
 
 Implementación utilizando `COND`
 ```scheme
