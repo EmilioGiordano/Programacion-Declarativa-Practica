@@ -35,7 +35,7 @@ Output: '(0 1 2 3)
 ```scheme
 (define (sumatoria lista suma) 
   (if (null? lista) 
-    (display suma) 
+    suma
     (sumatoria  
       (cdr lista) (+ suma (car lista)) 
     ) 
@@ -50,15 +50,19 @@ Output: 13
 ##### Sumatoria de dos listas
 Esta resolución permite hacer la sumatoria de una lista, en caso de que la otra esté vacía, y de ambas en caso de que contengan elementos
 ```scheme
-(define (sumatoria lista lista2 suma) 
+(define (sumatoria lista lista2 suma)
+  ; Caso => ambas listas vacías, devuelve suma = 0.
   (if (and (null? lista)(null? lista2))
     suma
+    ; Caso => primer lista vacía
     (if (null? lista)
       (sumatoria '() (cdr lista2) (+ suma (car lista2) ) )
+      ; Caso => segunda lista vacía
       (if (null? lista2)
         (sumatoria (cdr lista) '() 
           (+ suma (car lista))
         )
+        ; Caso => Ambas listas con elementos
         (sumatoria (cdr lista) (cdr lista2)
           (+ suma (+ (car lista) (car lista2)))
         )
