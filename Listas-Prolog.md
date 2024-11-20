@@ -38,9 +38,20 @@ suma([Cabeza1 | Resto1], [Cabeza2 | Resto2], Suma) :-
     Suma is Cabeza1 + Cabeza2 + SumaResto.
 ```
 Consulta
+Esta implementación permite sumar listas con diferente cantidad de elementos, incluso con una de ellas vacía.
 ```prolog
-?- suma([1, 2, 3], [1, 2, 3], Resultado).
-Resultado = 12
+?- suma([1, 2, 3], [1], Resultado). % Resultado = 7
+?- suma([1, 2, 3], [1, 2], Resultado). % Resultado = 9
+?- suma([1, 2, 3], [1, 2, 3], Resultado). % Resultado = 12
+
+?- suma([1], [1, 2, 3], Resultado). % Resultado = 7
+?- suma([1, 2], [1, 2, 3], Resultado). % Resultado = 9
+?- suma([1, 2, 3], [1, 2, 3], Resultado). % Resultado = 12
+
+suma([1, 2, 3], [], Resultado). % Resultado = 6
+suma([], [1, 2, 3], Resultado). % Resultado = 6
+
+
 ```
 ##### Búsqueda recursiva
 ```prolog
