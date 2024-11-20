@@ -1,7 +1,48 @@
 ## Listas
+#### Índice
+- [Suma de todos los elementos una listas](#suma-de-todos-los-elementos-una-listas)
+- [Suma de todos los elementos de dos listas](#suma-de-todos-los-elementos-de-dos-listas)
+- [Búsqueda recursiva](#búsqueda-recursiva)
+- [Unión/concatenación de listas](#uniónconcatenación-de-listas)
+- [Longitud de una lista](#longitud-de-una-lista)
+- [Concatenar dos listas y devolver una tercera.](#concatenar-dos-listas-y-devolver-una-tercera)
+##### Suma de todos los elementos una listas
+```prolog
+sumatoria([], 0).   
+sumatoria([Cabeza | Resto], Suma) :-  
+    sumatoria(Resto, SumaResto), 
+    Suma is Cabeza + SumaResto.
+```
+Consulta
+```prolog
+?-sumatoria([1, 2, 3], Resultado).
+Resultado = 6
+```
+##### Suma de todos los elementos de dos listas
+```prolog
+% Caso base
+suma([], [], 0).   
+% Caso con segunda lista vacía
+suma([Cabeza1 | Resto1], [], Suma) :-  
+    suma(Resto1, [], SumaResto), 
+    Suma is Cabeza1 + SumaResto.
 
+% Caso con primera lista vacía
+suma([], [Cabeza2 | Resto2], Suma) :-  
+    suma([], Resto2, SumaResto), 
+    Suma is Cabeza2 + SumaResto.
 
-##### Búsqueda recursiva:
+% Caso con ambas listas con elementos
+suma([Cabeza1 | Resto1], [Cabeza2 | Resto2], Suma) :-  
+    suma(Resto1, Resto2, SumaResto), 
+    Suma is Cabeza1 + Cabeza2 + SumaResto.
+```
+Consulta
+```prolog
+?- suma([1, 2, 3], [1, 2, 3], Resultado).
+Resultado = 12
+```
+##### Búsqueda recursiva
 ```prolog
 member(X, [X|_]).
 member(X, [_|Y]):- member(X, Y).
@@ -10,7 +51,7 @@ member(X, [_|Y]):- member(X, Y).
 
 `member(X, [_|Y]) :- member(X, Y).`: verifica si X está en el resto de la lista Y.
 
-##### Unión de listas / concatenación
+##### Unión/concatenación de listas 
 
 ```prolog
 concatenar([], L, L). % Caso base: concatenar una lista vacía con L da como resultado L.
