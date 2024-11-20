@@ -80,6 +80,21 @@ Output: 6
 Output: 6
 ```
 ##### Eliminar elemento de la lista
+Utilizando `IF`
+`equal?` puede ser reemplazado por un `=`
+```scheme
+(define (eliminar-primero elem lista) 
+  (if (null? lista)
+    '()
+    (if (equal? elem (car lista))   ; Si el primer elemento coincide
+      (cdr lista)                   ; devuelve el resto
+      (cons (car lista) (eliminar-primero elem (cdr lista))) 
+    )   
+  )
+) 
+```
+
+Utilizando `COND`
 ```scheme
 (define (eliminar-primero elem lista)
   (cond
@@ -94,7 +109,46 @@ Output: 6
 Output: '(1 3 2 4)
 ```
 
-##### Quitar todas las apariciones de un elemento
+
+##### Eliminar todas las apariciones de un elemento de una lista
+```scheme
+(define (eliminar-todos elem lista)
+  (if (null? lista)
+    '()
+    ; Else if
+    (if (= elem (car lista))
+      (eliminar-todos elem (cdr lista)) 
+      (cons (car lista) (eliminar-todos elem (cdr lista)))
+    )
+  )
+)
+```
+Ejemplo:
+
+Para la lista `(1 2 3 2 4)` y `elem = 2`:
+- Primera llamada: `(car lista)` = 1, no coincide. Se construye `(1 ... )`.
+- Segunda llamada: `(car lista) = 2`, coincide. Se ignora y se procesa (3 2 4).
+- Tercera llamada: `(car lista) = 3`, no coincide. Se construye (3 ...).
+- Cuarta llamada: `(car lista) = 2`, coincide. Se ignora y se procesa (4).
+- Quinta llamada: `(car lista) = 4`, no coincide. Se construye (4 ...).
+- Caso base: Lista vacía, se devuelve `'()`.
+
+"Construir" significa formar una nueva lista.
+
+
+
+Explicación: 
+1. Caso base: Si la lista está vacía `(null? lista)`, retorna una lista vacía `'()`.
+2. Coincidencia: Sino, si el primer elemento de la lista `(car lista)` es igual al elemento buscado `(equal? elem (car lista))`, no lo incluye y sigue procesando el resto de la lista `(eliminar-todos elem (cdr lista))`.
+3. Recursión: Si no hay coincidencia, construye una nueva lista incluyendo el elemento actual `(cons (car lista) ...)` y sigue recursivamente con el resto de la lista.
+
+
+
+
+
+
+
+Implementación utilizando `COND`
 ```scheme
 (define (eliminar-todos elem lista)
   (cond
