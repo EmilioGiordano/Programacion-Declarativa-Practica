@@ -1,73 +1,27 @@
 ## Guia de ejercicios: Secuencias en Prolog
 
-- [Guia de ejercicios: Secuencias en Prolog](#guia-de-ejercicios-secuencias-en-prolog)
-  - [Ejercicio 1](#ejercicio-1)
-      - [Regla](#regla)
-  - [Ejercicio 2](#ejercicio-2)
-      - [Regla](#regla-1)
-  - [Ejercicio 3](#ejercicio-3)
-      - [A. ¿Es Carlos progenitor de Guillermo?](#a-es-carlos-progenitor-de-guillermo)
-      - [B. ¿Es Jorge progenitor de Gonzalo?](#b-es-jorge-progenitor-de-gonzalo)
-      - [C. ¿Es Carlos progenitor de Amalia?](#c-es-carlos-progenitor-de-amalia)
-      - [D. Usando el predicado "padre" preguntar: ¿Es Carlos padre de Roberto?](#d-usando-el-predicado-padre-preguntar-es-carlos-padre-de-roberto)
-      - [E. ¿Gonzalo es mujer?](#e-gonzalo-es-mujer)
-      - [F. ¿Alberto es varón?](#f-alberto-es-varón)
-      - [G. ¿Es cierto que Luis es progenitor de Carla, y que Carla es mujer?.](#g-es-cierto-que-luis-es-progenitor-de-carla-y-que-carla-es-mujer)
-      - [H. ¿Es cierto que Ernesto es progenitor de Carlos, y que éste es progenitor](#h-es-cierto-que-ernesto-es-progenitor-de-carlos-y-que-éste-es-progenitor)
-  - [Ejercicio 4](#ejercicio-4)
-      - [A. ¿Federico es progenitor de alguien?](#a-federico-es-progenitor-de-alguien)
-      - [B. ¿Quiénes son los progenitores de Roberto?](#b-quiénes-son-los-progenitores-de-roberto)
-      - [C. ¿Guillermo tuvo alguna hija?](#c-guillermo-tuvo-alguna-hija)
-      - [Caso con hijos varones y mujeres:](#caso-con-hijos-varones-y-mujeres)
-  - [Ejercicio 5](#ejercicio-5)
-      - [Regla](#regla-2)
-      - [Consulta](#consulta)
-  - [Ejercicio 6](#ejercicio-6)
-      - [Regla](#regla-3)
-      - [Consulta](#consulta-1)
-  - [Ejercicio 7](#ejercicio-7)
-      - [Regla](#regla-4)
-      - [Consulta](#consulta-2)
-  - [Ejercicio 8](#ejercicio-8)
-      - [Regla](#regla-5)
-      - [Consulta](#consulta-3)
-  - [Ejercicio 9](#ejercicio-9)
-      - [Regla](#regla-6)
-      - [Consulta](#consulta-4)
-  - [Ejercicio 10](#ejercicio-10)
-      - [Regla](#regla-7)
-      - [Consulta](#consulta-5)
-  - [Ejercicio 11](#ejercicio-11)
-      - [Regla](#regla-8)
-      - [Consulta](#consulta-6)
-  - [Ejercicio 12](#ejercicio-12)
-      - [Usando los predicados anteriores, definir la relación `hermano_de`.](#usando-los-predicados-anteriores-definir-la-relación-hermano_de)
-      - [Regla](#regla-9)
-      - [Escriba las reglas necesarias para la consulta `?- tio(Quien,merlina).`:](#escriba-las-reglas-necesarias-para-la-consulta---tioquienmerlina)
-      - [Regla](#regla-10)
-      - [Consulta](#consulta-7)
-  - [Ejercicio 13](#ejercicio-13)
-      - [A. Están conectadas San Andrés de Giles y Mercedes?](#a-están-conectadas-san-andrés-de-giles-y-mercedes)
-      - [B. Chivilcoy está conectada con San Antonio de Areco?](#b-chivilcoy-está-conectada-con-san-antonio-de-areco)
-      - [C. La ruta 51 conecta Carmen de Areco con San Andrés de Giles?](#c-la-ruta-51-conecta-carmen-de-areco-con-san-andrés-de-giles)
-      - [D. Con quien está conectada Luján?](#d-con-quien-está-conectada-luján)
-      - [E. Cual es la que está conectada con San Andrés de Giles?](#e-cual-es-la-que-está-conectada-con-san-andrés-de-giles)
-      - [F. Cuales son las que están conectadas con San Andrés de Giles?](#f-cuales-son-las-que-están-conectadas-con-san-andrés-de-giles)
-        - [Predicado](#predicado)
-        - [Consulta](#consulta-8)
-      - [G. Que rutas llegan a Luján?](#g-que-rutas-llegan-a-luján)
-      - [H. Que rutas salen de Luján?](#h-que-rutas-salen-de-luján)
-      - [I. Se puede salir de Carmen de Areco y llegar a Luján pasando por San Andrés de Giles?](#i-se-puede-salir-de-carmen-de-areco-y-llegar-a-luján-pasando-por-san-andrés-de-giles)
-      - [J. Que ruta llega a Chivilcoy saliendo de Luján y pasando por Mercedes?](#j-que-ruta-llega-a-chivilcoy-saliendo-de-luján-y-pasando-por-mercedes)
+- [Ejercicio 1: hechos](#ejercicio-1-hechos)
+- [Ejercicio 2: Árbol genealógico](#ejercicio-2-árbol-genealógico)
+- [Ejercicio 3: escribir consultas simples y compuestas](#ejercicio-3-escribir-consultas-simples-y-compuestas)
+- [Ejercicio 4: escribir consultas](#ejercicio-4-escribir-consultas)
+- [Ejercicio 5: Grados celsius a fahrenheit](#ejercicio-5-grados-celsius-a-fahrenheit)
+- [Ejercicio 6: Convertir centímetros a yardas, pies y pulgadas](#ejercicio-6-convertir-centímetros-a-yardas-pies-y-pulgadas)
+- [Ejercicio 7: : salario con comisiones](#ejercicio-7-salario-con-comisiones)
+- [Ejercicio 8: promedio de notas](#ejercicio-8-promedio-de-notas)
+- [Ejercicio 9: gasto total en sueldos](#ejercicio-9-gasto-total-en-sueldos)
+- [Ejercicio 10: Calcular herencia para cada hijo](#ejercicio-10-calcular-herencia-para-cada-hijo)
+- [Ejercicio 11: oferta de artículos](#ejercicio-11-oferta-de-artículos)
+- [Ejercicio 12: reglas `hermano_de` y `tio_de`](#ejercicio-12-reglas-hermano_de-y-tio_de)
+- [Ejercicio 13: ciudades conectadas por rutas](#ejercicio-13-ciudades-conectadas-por-rutas)
 
-### Ejercicio 1
+### Ejercicio 1: hechos
 Escribir las siguientes oraciones en Prolog:
 - El oro es valioso.
 - Isabel es mujer.
 - Juan es Rey.
 - Zeus es el progenitor de Hercules.
 - José le presta dinero a Pedro.
-##### Regla
+##### Hechos
 ```prolog
 es_valioso(oro). 
 es_mujer(isabel).
@@ -76,7 +30,7 @@ es_progenitor_de(zeus, hercules).
 le_presta_dinero(jose, pedro).
 ```
 
-### Ejercicio 2
+### Ejercicio 2: Árbol genealógico
 Escribir en Prolog los datos relevantes, (a los efectos genealógicos), del siguiente párrafo: "La familia de Luis no es muy numerosa, sus padres, Carlos y Susana, tuvieron tres hijos: Roberto, Amalia, y Luis, de los cuales Luis es el menor. Carlos, a su vez, tiene una hermana mayor llamada Isabel, siendo ambos hijos de Ana y Guillermo. Los padres de Susana, Mercedes y Ernesto, tuvieron otra hija bastante menor que ella, a quien bautizaron con el nombre de Angélica, la que es tan bella como su nombre. Los dos hijos de Luis y su esposa Laura, llamados Federico y Carla, están estudiando letras".
 __Utilizar solamente los predicados "es_progenitor_de", "es_varon" y "es_mujer".__
 ##### Regla
@@ -121,7 +75,7 @@ es_mujer(mercedes).
 es_mujer(angelica).
 ```
 
-### Ejercicio 3
+### Ejercicio 3: escribir consultas simples y compuestas
 Usando la base de datos generada en el problema de la familia de Luis, y con lo que se conoce hasta ahora, escribir consultas para obtener la siguiente información:
 __Preguntas simples__:
 ##### A. ¿Es Carlos progenitor de Guillermo?
@@ -174,7 +128,7 @@ de Luis, y a su vez Luis es progenitor de Carla?
 es_progenitor_de(luis,carla)
 ```
 
-### Ejercicio 4
+### Ejercicio 4: escribir consultas
 Usando la base de datos generada en el problema de la familia de Luis, y con
 lo que se conoce hasta ahora, escribir consultas para obtener la siguiente
 información:
@@ -225,7 +179,7 @@ Nieta = amalia
 ```
 La hija es Susana, la hija mujer de Susana es Amalia
 
-### Ejercicio 5
+### Ejercicio 5: Grados celsius a fahrenheit
 Definir un predicado que relacione una temperatura expresada en grados Celsius con la misma temperatura expresada en grados Farenheit. Recordamos que F = (9/5) * C + 32
 
 ##### Regla
@@ -240,7 +194,7 @@ celsius_a_fahrenheit(C, F) :-
 F = 33.8
 ```
 
-### Ejercicio 6
+### Ejercicio 6: Convertir centímetros a yardas, pies y pulgadas
 Definir un predicado que relacione una longitud expresada en centímetros,
 con la misma longitud expresada en pulgadas, pies y yardas. Recordamos que:
 1 yarda = 3 pies
@@ -262,7 +216,7 @@ Pulgadas = 254.0,
 Yardas = 7.055555555555556
 ```
 
-### Ejercicio 7
+### Ejercicio 7: salario con comisiones
 Una empresa de ventas paga a sus empleados un salario fijo de 800 pesos, mas una comisión de $50 por cada venta realizada, más el 8% sobre el monto total de ventas. Escribir la regla de un predicado ternario que vincule la cantidad de ventas, con el monto total de ventas y el sueldo del vendedor.
 ##### Regla
 ```prolog
@@ -280,7 +234,8 @@ sueldo(Ventas, MontoTotalVentas, Sueldo) :-
 ?- sueldo(10, 2000000, Sueldo).
 Sueldo = 161300.0
 ```
-### Ejercicio 8
+
+### Ejercicio 8: promedio de notas
 Definir un predicado que vincule las notas de cuatro parciales con la nota promedio.
 ##### Regla
 ```prolog
@@ -294,7 +249,7 @@ promedio(Nota1,Nota2, Nota3, Nota4, Promedio) :-
 Promedio = 4.25
 ```
 
-### Ejercicio 9
+### Ejercicio 9: gasto total en sueldos
 Una empresa tiene 5 gerentes, 23 empleados administrativos y 7 ordenanzas. Preparar un predicado que vincule el sueldo de cada categoría con el total que la empresa debe pagar a fin de mes.
 ##### Regla
 ```prolog
@@ -311,7 +266,7 @@ pagoFinal(SueldoGerente, SueldoAdministrativo, SueldoOrdenanza, PagoFinal):-
 PagoFinal = 19200000
 ```
 
-### Ejercicio 10
+### Ejercicio 10: Calcular herencia para cada hijo
 Un millonario excéntrico tenía tres hijos Carlos, José' y Marta. Al morir dejó el siguiente legado: "A José le dejo 4/3 de lo que le dejo a Carlos; a Carlos le dejo 1/3 de mi fortuna y a Marta le dejo la mitad de lo que le dejo a José". Preparar un predicado que vincule la suma a repartir con lo que le toca a cada uno.
 ##### Regla
 ```prolog
@@ -328,7 +283,7 @@ HerenciaJose = 444444.4444444444,
 HerenciaMarta = 222222.2222222222
 ```
 
-### Ejercicio 11
+### Ejercicio 11: oferta de artículos
 En un negocio se desea armar una oferta para fin de año combinando un artículo de bazar, uno de perfumería y uno de juguetería, con la condición de que la oferta no supere un cierto precio máximo. Para ello contamos con la __siguiente base de datos__:
 ```prolog
 bazar(fuentes).
@@ -381,7 +336,7 @@ ArticuloPerfumeria = jabones
 ```
 
 
-### Ejercicio 12
+### Ejercicio 12: reglas `hermano_de` y `tio_de`
 La siguiente es la descripción de la familia Adams:
 ```prolog
 padre_de(homero, pericles).
@@ -423,7 +378,7 @@ tio(Tio, Sobrino) :-
 Quien = lucas
 ```
 
-### Ejercicio 13
+### Ejercicio 13: ciudades conectadas por rutas
 Se tiene la siguiente base de datos con ciudades vecinas y las rutas que las conectan:
 ```prolog
 conectadas(arrecifes, san_antonio_de_areco, ruta_8).
