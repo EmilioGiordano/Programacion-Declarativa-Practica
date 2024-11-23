@@ -1,5 +1,7 @@
 ### Bienvenido, en este repositorio encontrará material, mayormente práctico, sobre la `Programación Declarativa` en sus dos paradigmas: `Programación Lógica`(Prolog) y `Programación Funcional`(Scheme).
 ### Siéntase libre de utilizar el material y distribuirlo en necesidad de quien lo necesite.
+Para leer con mayor comodidad [descargue](https://drive.google.com/drive/folders/1JtweDvm5zh73COx_3AiSRmKTX4IBQrRW?usp=sharing) la carpeta situada en Google Drive
+
 
 ## Paradigma de Programación Lógica en Prolog
 
