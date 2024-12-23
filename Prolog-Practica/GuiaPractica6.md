@@ -1,4 +1,6 @@
-## GUÍA DE EJERCICIOS: Recursión y Listas en Prolog
+# 📝 Programación Declarativa
+## Paradigma de Programación Lógica
+### Guia de ejercicios: Recursión y Listas en Prolog
 
 - [Ejemplo: Factorial](#ejemplo-factorial)
 - [Ejercicio 1: Cadena de progenitores](#ejercicio-1-cadena-de-progenitores)
@@ -9,16 +11,14 @@
 - [Ejercicio 6: Cantidad de números reales de una lista](#ejercicio-6-cantidad-de-números-reales-de-una-lista)
 - [Ejercicio 7: Suma de elementos de una lista](#ejercicio-7-suma-de-elementos-de-una-lista)
 - [Ejercicio 8: Lista ordenada creciente](#ejercicio-8-lista-ordenada-creciente)
-
 - [Ejercicio 9: Último elemento de una lista](#ejercicio-9-último-elemento-de-una-lista)
 - [Ejercicio 10: Lista subconjunto de otra lista](#ejercicio-10-lista-subconjunto-de-otra-lista)
-
 - [Ejercicio 11: Concatenación de listas(sin usar predicado append)](#ejercicio-11-concatenación-de-listassin-usar-predicado-append)
 - [Ejercicio 12: Lista rotada a la izquierda](#ejercicio-12-lista-rotada-a-la-izquierda)
-
 - [Ejercicio 13: Lista rotada a la izquierda N veces](#ejercicio-13-lista-rotada-a-la-izquierda-n-veces)
+- [Más resúmenes y material de Programación Declarativa](#mas-info)
 
-### Ejemplo: Factorial 
+#### Ejemplo: Factorial 
 ```prolog
 % Caso base: el factorial de 0 es 1.
 factorial(0, 1).
@@ -31,7 +31,7 @@ factorial(N, Resultado) :-
     factorial(N1, R1),    % Llamada recursiva
     Resultado is N * R1.  % Calculamos el resultado
 ```
-### Ejercicio 1: Cadena de progenitores
+#### Ejercicio 1: Cadena de progenitores
 Dada una base de datos en la cual se describe una cadena de progenitores con hechos como:
 
 ##### Hechos
@@ -62,7 +62,7 @@ true
 ?- antepasado_de(juan, hector).
 false
 ```
-### Ejercicio 2: MCD
+#### Ejercicio 2: MCD
 Resolver el problema de encontrar el MCD entre dos números, sabiendo que, si los números son iguales, el MCD es el mismo número, en otro caso el MCD es igual MCD entre el menor de ellos y la diferencia entre ambos
 ##### Predicado
 ```prolog
@@ -87,7 +87,7 @@ mcd(A, B, MCD) :-
 ?- mcd(4, 12, MCD)
 MCD = 4
 ```
-### Ejercicio 3: Fibonacci
+#### Ejercicio 3: Fibonacci
 Resolver el problema de encontrar el enésimo término de la sucesión de Fibonacci
 ##### Predicado
 ```prolog
@@ -125,7 +125,7 @@ F = 55
 | 10 | 55 |
 
 
-### Ejercicio 4: Ordenar una lista de dos elementos de menor a mayor
+#### Ejercicio 4: Ordenar una lista de dos elementos de menor a mayor
 Predicado que relaciona una lista numérica de dos elementos con otra lista con esos dos elementos
 ordenados de menor a mayor.
 
@@ -141,7 +141,7 @@ X = [812, 2122]
 acomodados( [2122, 812], X).
 X = [812, 2122]
 ```
-### Ejercicio 5: Cantidad de elementos de una lista
+#### Ejercicio 5: Cantidad de elementos de una lista
 Predicado que relaciona una lista con su cantidad de elementos ordenados de menor a mayor.
 
 ##### Predicado
@@ -157,7 +157,7 @@ longitud_de([_|Resto], N) :-
 X = 5
 ```
 
-### Ejercicio 6: Cantidad de números reales de una lista
+#### Ejercicio 6: Cantidad de números reales de una lista
 Predicado que vincula una lista de números enteros, con la cantidad de números naturales que contiene.
 
 ##### Predicado
@@ -175,7 +175,7 @@ X = 4
 X = 3
 ```
 
-### Ejercicio 7: Suma de elementos de una lista
+#### Ejercicio 7: Suma de elementos de una lista
 Predicado que vincula una lista numérica, con la suma de sus elementos
 
 ##### Predicado
@@ -192,7 +192,7 @@ X = 30
 ?- suma([6, 7, 4, 3, 2, 8, 23, 12, 3124, 1234, -1231], X).
 X = 3192
 ```
-### Ejercicio 8: Lista ordenada creciente
+#### Ejercicio 8: Lista ordenada creciente
 Predicado unario que es verdadero cuando su sujeto es una lista numérica ordenada en forma creciente.
 
 ```prolog
@@ -214,7 +214,7 @@ YES
 FAIL
 ```
 
-### Ejercicio 9: Último elemento de una lista
+#### Ejercicio 9: Último elemento de una lista
 Predicado que relaciona una lista cualquiera con el elemento que se encuentra en el último lugar.
 ```prolog
 ?- ultimo([a, b, c, r, f, h], X).
@@ -237,7 +237,7 @@ YES
 ?- subconjunto([d, a, b], [m, k, f, r, d, a]).
 FAIL
 ```
-### Ejercicio 11: Concatenación de listas(sin usar predicado append)
+#### Ejercicio 11: Concatenación de listas(sin usar predicado append)
 Predicado que relaciona dos listas con una tercera, formada con los elementos de ambas. (no usar el predicado append)
 ```prolog
 concatenar([], L, L). % Caso base: si la primera lista es vacía, el resultado es la segunda lista.
@@ -249,7 +249,7 @@ concatenar([X|Resto], L, [X|Resultado]) :-
 Resultado = [a1, a2, a3, b1, b2, b3]
 ```
 
-### Ejercicio 12: Lista rotada a la izquierda
+#### Ejercicio 12: Lista rotada a la izquierda
 Predicado que relaciona una lista L1 con otra lista L2, con los mismos elementos que L1, pero rotados un lugar a la izquierda.
 ##### Predicado
 ```prolog
@@ -268,7 +268,7 @@ agregar_al_final([Y|Resto], X, [Y|L]) :-
 X = [b, c, d, a]
 ```
 
-### Ejercicio 13: Lista rotada a la izquierda N veces
+#### Ejercicio 13: Lista rotada a la izquierda N veces
 Predicado que relaciona una lista L1 con otra lista L2, con los mismos elementos que L1, pero rotados N lugares a la izquierda.
 
 ##### Predicado
@@ -293,3 +293,12 @@ mover_al_final([Y|Resto], X, [Y|L]) :- % Caso recursivo: mantiene el primer elem
 ?- rotadan(4, [a, b, c, d, e, f, g, h, i, j], X).
 X = [e, f, g, h, i, j, a, b, c, d]
 ```
+
+#### <a id="mas-info"></a>
+<span style="display:none;">Firma</span>
+
+---
+✍️ **Autor:** Emilio Giordano  
+🔗 Más resúmenes de Programación Declarativa en el [repositorio](https://github.com/EmilioGiordano/Programacion-Declarativa-Practica)  
+
+---

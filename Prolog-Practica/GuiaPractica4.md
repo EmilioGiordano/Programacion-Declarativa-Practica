@@ -1,4 +1,8 @@
-## Guia de ejercicios: Secuencias en Prolog
+# 📝 Programación Declarativa
+## Paradigma de Programación Lógica
+### Guia de ejercicios: Secuencias en Prolog
+
+
 
 - [Ejercicio 1: hechos](#ejercicio-1-hechos)
 - [Ejercicio 2: Árbol genealógico](#ejercicio-2-árbol-genealógico)
@@ -13,8 +17,9 @@
 - [Ejercicio 11: oferta de artículos](#ejercicio-11-oferta-de-artículos)
 - [Ejercicio 12: reglas `hermano_de` y `tio_de`](#ejercicio-12-reglas-hermano_de-y-tio_de)
 - [Ejercicio 13: ciudades conectadas por rutas](#ejercicio-13-ciudades-conectadas-por-rutas)
+- [Más resúmenes y material de Programación Declarativa](#mas-info)
 
-### Ejercicio 1: hechos
+#### Ejercicio 1: hechos
 Escribir las siguientes oraciones en Prolog:
 - El oro es valioso.
 - Isabel es mujer.
@@ -30,7 +35,7 @@ es_progenitor_de(zeus, hercules).
 le_presta_dinero(jose, pedro).
 ```
 
-### Ejercicio 2: Árbol genealógico
+#### Ejercicio 2: Árbol genealógico
 Escribir en Prolog los datos relevantes, (a los efectos genealógicos), del siguiente párrafo: "La familia de Luis no es muy numerosa, sus padres, Carlos y Susana, tuvieron tres hijos: Roberto, Amalia, y Luis, de los cuales Luis es el menor. Carlos, a su vez, tiene una hermana mayor llamada Isabel, siendo ambos hijos de Ana y Guillermo. Los padres de Susana, Mercedes y Ernesto, tuvieron otra hija bastante menor que ella, a quien bautizaron con el nombre de Angélica, la que es tan bella como su nombre. Los dos hijos de Luis y su esposa Laura, llamados Federico y Carla, están estudiando letras".
 __Utilizar solamente los predicados "es_progenitor_de", "es_varon" y "es_mujer".__
 ##### Regla
@@ -75,7 +80,7 @@ es_mujer(mercedes).
 es_mujer(angelica).
 ```
 
-### Ejercicio 3: escribir consultas simples y compuestas
+#### Ejercicio 3: escribir consultas simples y compuestas
 Usando la base de datos generada en el problema de la familia de Luis, y con lo que se conoce hasta ahora, escribir consultas para obtener la siguiente información:
 __Preguntas simples__:
 ##### A. ¿Es Carlos progenitor de Guillermo?
@@ -128,7 +133,7 @@ de Luis, y a su vez Luis es progenitor de Carla?
 es_progenitor_de(luis,carla)
 ```
 
-### Ejercicio 4: escribir consultas
+#### Ejercicio 4: escribir consultas
 Usando la base de datos generada en el problema de la familia de Luis, y con
 lo que se conoce hasta ahora, escribir consultas para obtener la siguiente
 información:
@@ -179,7 +184,7 @@ Nieta = amalia
 ```
 La hija es Susana, la hija mujer de Susana es Amalia
 
-### Ejercicio 5: Grados celsius a fahrenheit
+#### Ejercicio 5: Grados celsius a fahrenheit
 Definir un predicado que relacione una temperatura expresada en grados Celsius con la misma temperatura expresada en grados Farenheit. Recordamos que F = (9/5) * C + 32
 
 ##### Regla
@@ -194,7 +199,7 @@ celsius_a_fahrenheit(C, F) :-
 F = 33.8
 ```
 
-### Ejercicio 6: Convertir centímetros a yardas, pies y pulgadas
+#### Ejercicio 6: Convertir centímetros a yardas, pies y pulgadas
 Definir un predicado que relacione una longitud expresada en centímetros,
 con la misma longitud expresada en pulgadas, pies y yardas. Recordamos que:
 1 yarda = 3 pies
@@ -216,7 +221,7 @@ Pulgadas = 254.0,
 Yardas = 7.055555555555556
 ```
 
-### Ejercicio 7: salario con comisiones
+#### Ejercicio 7: salario con comisiones
 Una empresa de ventas paga a sus empleados un salario fijo de 800 pesos, mas una comisión de $50 por cada venta realizada, más el 8% sobre el monto total de ventas. Escribir la regla de un predicado ternario que vincule la cantidad de ventas, con el monto total de ventas y el sueldo del vendedor.
 ##### Regla
 ```prolog
@@ -235,7 +240,7 @@ sueldo(Ventas, MontoTotalVentas, Sueldo) :-
 Sueldo = 161300.0
 ```
 
-### Ejercicio 8: promedio de notas
+#### Ejercicio 8: promedio de notas
 Definir un predicado que vincule las notas de cuatro parciales con la nota promedio.
 ##### Regla
 ```prolog
@@ -249,7 +254,7 @@ promedio(Nota1,Nota2, Nota3, Nota4, Promedio) :-
 Promedio = 4.25
 ```
 
-### Ejercicio 9: gasto total en sueldos
+#### Ejercicio 9: gasto total en sueldos
 Una empresa tiene 5 gerentes, 23 empleados administrativos y 7 ordenanzas. Preparar un predicado que vincule el sueldo de cada categoría con el total que la empresa debe pagar a fin de mes.
 ##### Regla
 ```prolog
@@ -266,7 +271,7 @@ pagoFinal(SueldoGerente, SueldoAdministrativo, SueldoOrdenanza, PagoFinal):-
 PagoFinal = 19200000
 ```
 
-### Ejercicio 10: Calcular herencia para cada hijo
+#### Ejercicio 10: Calcular herencia para cada hijo
 Un millonario excéntrico tenía tres hijos Carlos, José' y Marta. Al morir dejó el siguiente legado: "A José le dejo 4/3 de lo que le dejo a Carlos; a Carlos le dejo 1/3 de mi fortuna y a Marta le dejo la mitad de lo que le dejo a José". Preparar un predicado que vincule la suma a repartir con lo que le toca a cada uno.
 ##### Regla
 ```prolog
@@ -283,7 +288,7 @@ HerenciaJose = 444444.4444444444,
 HerenciaMarta = 222222.2222222222
 ```
 
-### Ejercicio 11: oferta de artículos
+#### Ejercicio 11: oferta de artículos
 En un negocio se desea armar una oferta para fin de año combinando un artículo de bazar, uno de perfumería y uno de juguetería, con la condición de que la oferta no supere un cierto precio máximo. Para ello contamos con la __siguiente base de datos__:
 ```prolog
 bazar(fuentes).
@@ -336,7 +341,7 @@ ArticuloPerfumeria = jabones
 ```
 
 
-### Ejercicio 12: reglas `hermano_de` y `tio_de`
+#### Ejercicio 12: reglas `hermano_de` y `tio_de`
 La siguiente es la descripción de la familia Adams:
 ```prolog
 padre_de(homero, pericles).
@@ -378,7 +383,7 @@ tio(Tio, Sobrino) :-
 Quien = lucas
 ```
 
-### Ejercicio 13: ciudades conectadas por rutas
+#### Ejercicio 13: ciudades conectadas por rutas
 Se tiene la siguiente base de datos con ciudades vecinas y las rutas que las conectan:
 ```prolog
 conectadas(arrecifes, san_antonio_de_areco, ruta_8).
@@ -485,3 +490,12 @@ Cuando usas `_`, Prolog solo está verificando si las conexiones existen, sin pr
 ?- conectadas(lujan, mercedes, _), conectadas(mercedes, chivilcoy, Ruta)
 Ruta = ruta_5
 ```
+
+#### <a id="mas-info"></a>
+<span style="display:none;">Firma</span>
+
+---
+✍️ **Autor:** Emilio Giordano  
+🔗 Más resúmenes de Programación Declarativa en el [repositorio](https://github.com/EmilioGiordano/Programacion-Declarativa-Practica)  
+
+---

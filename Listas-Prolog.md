@@ -1,4 +1,7 @@
-## Listas
+# 📝 Programación Declarativa
+## Paradigma de Programación Lógica
+### Listas y recursión en Prolog
+  
 #### Índice
 - [Crear lista a partir de base de hechos](#crear-lista-a-partir-de-base-de-hechos)
 - [Suma de todos los elementos una listas](#suma-de-todos-los-elementos-una-listas)
@@ -153,3 +156,10 @@ concatenar([X|Resto], L, [X|Resultado]) :-
 ?- concatenar([a1, a2, a3], [b1, b2, b3], Resultado).
 Resultado = [a1, a2, a3, b1, b2, b3]
 ```
+
+
+---
+✍️ **Autor:** Emilio Giordano  
+🔗 Más resúmenes de Programación Declarativa en el [repositorio](https://github.com/EmilioGiordano/Programacion-Declarativa-Practica)  
+
+---

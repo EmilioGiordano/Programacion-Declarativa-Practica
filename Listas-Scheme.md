@@ -1,4 +1,6 @@
-## Programación funcional: Listas y recursión en Scheme
+# 📝 Programación Declarativa
+## Paradigma de Programación Funcional
+### Listas y recursión en Scheme
 
 #### Índice
 - [Función Cons](#función-cons)
@@ -10,6 +12,7 @@
 - [Concatenar listas sin Append](#concatenar-listas-sin-append)
 - [Longitud de una lista](#longitud-de-una-lista)
 - [Invertir lista](#invertir-lista)
+
 
 ##### Función Cons
 Una de las funciones más comunes que encontrará es la función «`cons`». Toma un valor y lo sitúa en el segundo argumento, una lista.
@@ -187,3 +190,9 @@ Output: 6
   )
 )
 ```
+
+---
+✍️ **Autor:** Emilio Giordano  
+🔗 Más resúmenes de Programación Declarativa en el [repositorio](https://github.com/EmilioGiordano/Programacion-Declarativa-Practica)  
+
+---

@@ -1,5 +1,9 @@
 Programación funcional – Decisiones y recursión 
 
+# 📝 Programación Declarativa
+## Paradigma de Programación Funcional
+### Unidad 6: Decisiones y recursión 
+
 # Índice
 
 ### Decisiones
@@ -427,3 +431,9 @@ Definir una función que acepta una lista y dos átomos "a" y "b", y devuelve ot
 (sustituir-primera '(1 2 3) 'a 'b)        ; Devuelve '(1 2 3)
 (sustituir-primera '() 'a 'b)             ; Devuelve '()
 ```
+
+---
+✍️ **Autor:** Emilio Giordano  
+🔗 Más resúmenes de Programación Declarativa en el [repositorio](https://github.com/EmilioGiordano/Programacion-Declarativa-Practica)  
+
+---

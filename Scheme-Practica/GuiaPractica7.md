@@ -1,7 +1,28 @@
-## Unidad 6: Introducción a Programación Funcional en Scheme
+# 📝 Programación Declarativa
+## Paradigma de Programación Funcional
+### Listas y recursión en Scheme
 
+- [Ejercicio 1: Funcion tres](#ejercicio-1-funcion-tres)
+- [Ejercicio 2: Función triple](#ejercicio-2-funcion-triple)
+- [Ejercicio 3: Mitad de un número](#ejercicio-3-mitad-de-un-numero)
+- [Ejercicio 4: duplo de la suma](#ejercicio-4-duplo-de-la-suma)
+- [Ejercicio 5: Circunferencia](#ejercicio-5-circunferencia)
+- [Ejercicio 6: Celsius a Fahrenheit](#ejercicio-6-celsius-a-fahrenheit)
+- [Ejercicio 7: Conversión de unidades](#ejercicio-7-conversion-de-unidades)
+- [Ejercicio 8: Superficie](#ejercicio-8-superficie)
+- [Ejercicio 9: Base y altura de un triángulo](#ejercicio-9-base-y-altura-de-un-triangulo)
+- [Ejercicio 10: Hipotenusa](#ejercicio-10-hipotenusa)
+- [Ejercicio 11: Área de un triángulo](#ejercicio-11-area-de-un-triangulo)
+- [Ejercicio 12: Ecuación de primer grado](#ejercicio-12-ecuacion-de-primer-grado)
+- [Ejercicio 13: Cociente y resto de la división de dos números enteros](#ejercicio-13-cociente-y-resto-de-la-division-de-dos-numeros-enteros)
+- [Ejercicio 14: Segundos, minutos y horas](#ejercicio-14-segundos-minutos-y-horas)
+- [Ejercicio 15: Porcentaje de varones y mujeres](#ejercicio-15-porcentaje-de-varones-y-mujeres)
+- [Ejercicio 16: Conversión de medidas](#ejercicio-16-conversion-de-medidas)
+- [Ejercicio 17: Doble](#ejercicio-17-doble)
+- [Ejercicio 18: Producto por tres](#ejercicio-18-producto-por-tres)
+- [Más resúmenes y material de Programación Declarativa](#mas-info)
 
-### Ejercicio 1: Funcion tres
+#### Ejercicio 1: Funcion tres
 Escribir una función llamada "tres" que, dado cualquier valor, devuelve el número 3.
 __Función__
 ```scheme
@@ -14,7 +35,7 @@ __Consulta__
 Output: 3
 ```
 
-### Ejercicio 2: Función triple 
+#### Ejercicio 2: Función triple 
 Escribir una función llamada triple que, dado cualquier valor x, devuelve el triple de x.
 __Función__
 ```scheme
@@ -27,7 +48,7 @@ __Consulta__
 (triple 5)
 output: 15
 ```
-### Ejercicio 3: Mitad de un número
+#### Ejercicio 3: Mitad de un número
 Función que, dado cualquier número, devuelve la mitad de este.
 __Función__
 ```scheme
@@ -40,7 +61,7 @@ __Consulta__
 (mitad 10)
 output: 5
 ```
-### Ejercicio 4: duplo de la suma
+#### Ejercicio 4: duplo de la suma
 Escribir una función que, dado cualquier valor x, devuelve el duplo de la suma de 15 + x.
 __Función__
 ```scheme
@@ -53,7 +74,7 @@ __Consulta__
 (duplo 10)
 output: 50
 ```
-### Ejercicio 5: Circunferencia
+#### Ejercicio 5: Circunferencia
 Definir "circunferencia", que dado el radio retorne la longitud de esta.  
 __Función__
 ```scheme
@@ -67,7 +88,7 @@ __Consulta__
 (circunferencia 5)
 Output: 31.41592653589793
 ```
-### Ejercicio 6: Celsius a Fahrenheit
+#### Ejercicio 6: Celsius a Fahrenheit
 Escribir una función que, dada una temperatura en grados Celsius, la devuelva expresada en grados Fahrenheit. La fórmula de conversión es f = (9/5)c + 32.
 __Función__
 ```scheme
@@ -80,7 +101,7 @@ __Consulta__
 (temperatura 12)
 Output: 53.6
 ```
-### Ejercicio 7:
+#### Ejercicio 7:
 Sabiendo que: 1 pie = 12 pulgadas; 1 yarda = 3 pies; 1 pulgada = 2.54 centímetros. Definir tres funciones (yardas, pulgadas y pies), que, dado un valor en centímetros, devuelva esa longitud expresada en esas unidades.
 __Función__
 ```scheme
@@ -102,7 +123,7 @@ __Consulta__
 Output:
 '(39.37007874015748 3.2808398950131235 1.0936132983377078)
 ```
-### Ejercicio 8: Superficie
+#### Ejercicio 8: Superficie
 Definir "superficie", una función que dado el ancho y el largo de una habitación retorne su superficie.
 __Función__
 ```scheme
@@ -115,7 +136,7 @@ __Consulta__
 (superficie 10 10)
 Output: 100
 ```
-### Ejercicio 9: Base y altura de un triángulo
+#### Ejercicio 9: Base y altura de un triángulo
 Definir una función para ingresarle la base y la altura de un triángulo, y devuelva el valor del área.
 __Función__
 ```scheme
@@ -128,7 +149,7 @@ __Consulta__
 (areaTriangulo 8 5)
 Output: 20
 ```
-### Ejercicio 10: Hipotenusa
+#### Ejercicio 10: Hipotenusa
 La relación entre los lados (a,b) de un triángulo y la hipotenusa viene dada por la fórmula `a2 + b2 = h2`. Definir una función para que, dadas las longitudes de los lados, calcule y devuelva la hipotenusa.
 __Función__
 ```scheme
@@ -141,7 +162,7 @@ __Consulta__
 (hipotenusa 5 5)
 Output: 7.0710678118654755
 ```
-### Ejercicio 11: Área de un triángulo 
+#### Ejercicio 11: Área de un triángulo 
 El área de un triángulo cuyos lados son a, b y c se puede calcular por la fórmula:
 A = sqrt(p * (p - a) * (p - b) * (p - c))
 donde p = (a+b+c)/2. Definir una función para ingresarle a, b y c,  y devuelva el área del triángulo.
@@ -157,7 +178,7 @@ __Consulta__
 (area-triangulo 3 4 5)
 Output: 6
 ``` 
-### Ejercicio 12: Ecuación de primer grado
+#### Ejercicio 12: Ecuación de primer grado
 Definir una función que acepte los coeficientes a, b y c de la ecuación de primer grado a * x + b = c, y devuelva el valor de la raíz.
 __Función__
 ```scheme
@@ -170,7 +191,7 @@ __Consulta__
 (ecuacion-primer-grado 10 2 5)
 Output: 1/10
 ```
-### Ejercicio 13: Cociente y resto de la división de dos numeros enteros
+#### Ejercicio 13: Cociente y resto de la división de dos numeros enteros
 Definir una función que acepte dos números enteros, y devuelva una lista con el cociente y el resto la división entera entre los dos números.
 
 __Función con lista__
@@ -203,7 +224,7 @@ Output:
   Resto: 0
 ```
 
-### Ejercicio 14: Segundos, minutos y horas.
+#### Ejercicio 14: Segundos, minutos y horas.
 Definir una función que, dada una cantidad de segundos, devuelva una lista con la misma cantidad expresada en minutos y segundos.
 __Función__
 ```scheme
@@ -219,7 +240,7 @@ __Consulta__
 Output:
 '(2 10) => 2 minutos 10 segundos
 ```  
-### Ejercicio 15: Porcentaje de varones y mujeres
+#### Ejercicio 15: Porcentaje de varones y mujeres
 Definir una función que acepte la cantidad de varones y mujeres que hay en un recinto, y  devuelva una lista con el porcentaje de varones y mujeres.
 __Función__
 ```scheme
@@ -243,7 +264,7 @@ Output: '(55.0 45.0)
 (porcentaje-varones-mujeres 34 21)
 Output: '(61.81818181818182 38.18181818181818)
 ```
-### Ejercicio 16: 
+#### Ejercicio 16: 
 Utilizando las expresiones descriptas anteriormente, definir la función pasaje, que reciba  una medida en centímetros, y retorne una lista con esa medida expresada en pulgadas,  pies y yardas.
 __Función__
 `let` permite crear asignaciones locales de expresiones a identificadores.
@@ -263,7 +284,7 @@ __Consulta__
 (pasaje 100000)
 Output: '(39370.07874015748 3280.839895013123 1093.6132983377079)
 ```
-### Ejercicio 17: Doble 
+#### Ejercicio 17: Doble 
 Definir una función llamada doblar que, dada una lista de 3 números, devuelve el doble de su primera componente.
 __Función__
 ```scheme
@@ -281,7 +302,7 @@ __Consulta__
 Output: 26
 ```
 
-### Ejercicio 18: Producto por tres
+#### Ejercicio 18: Producto por tres
 Definir una función llamada producto_por_tres que dada una lista de 3 números devuelva otra lista con los mismos multiplicados por 3.
 __Función__
 
@@ -316,3 +337,12 @@ __Consulta__
 (producto_por_tres3 '(2 4 6) '())
 Output: '(6 12 18)
 ```
+
+#### <a id="mas-info"></a>
+<span style="display:none;">Firma</span>
+
+---
+✍️ **Autor:** Emilio Giordano  
+🔗 Más resúmenes de Programación Declarativa en el [repositorio](https://github.com/EmilioGiordano/Programacion-Declarativa-Practica)  
+
+---

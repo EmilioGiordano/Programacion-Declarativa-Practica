@@ -1,9 +1,12 @@
-## Guia de ejercicios: Decisiones en Prolog
+# 📝 Programación Declarativa
+## Paradigma de Programación Lógica
+### Guia de ejercicios: Decisiones en Prolog
 
-- [Ejercicio 1: Regla `progenitor_de`](#ejercicio-1-regla-progenitor_de)
+
+- [Ejercicio 1: Regla _progenitor_de_](#ejercicio-1-regla-progenitor_de)
 - [Ejercicio 2: Mayor o igual](#ejercicio-2-mayor-o-igual)
 - [Ejercicio 3: Paridad](#ejercicio-3-paridad)
-- [Ejercicio 4: Regla `cuñado_de`](#ejercicio-4-regla-cuñado_de)
+- [Ejercicio 4: Regla _cuñado_de_](#ejercicio-4-regla-cuñado_de)
 - [Ejercicio 5: Múltiplo](#ejercicio-5-múltiplo)
 - [Ejercicio 6: Múltiplo](#ejercicio-6-múltiplo)
 - [Ejercicio 7: Longitudes de un triángulo](#ejercicio-7-longitudes-de-un-triángulo)
@@ -11,8 +14,9 @@
 - [Ejercicio 9: Tiempo que tarda en llenar o vaciarse un tanque de agua](#ejercicio-9-tiempo-que-tarda-en-llenar-o-vaciarse-un-tanque-de-agua)
 - [Ejercicio 10: Hora un segundo despues](#ejercicio-10-hora-un-segundo-después)
 - [Ejercicio 11: Categorizar jugadores](#ejercicio-11-categorizar-jugadores)
+- [Más resúmenes y material de Programación Declarativa](#mas-info)
 
-### Ejercicio 1: regla `progenitor_de`
+#### Ejercicio 1: regla `progenitor_de`
 Se tiene una base con los siguientes hechos:
 ##### Hechos
 ```prolog
@@ -35,7 +39,7 @@ X = maria ;
 X = carlos.
 ```
 
-### Ejercicio 2: mayor o igual
+#### Ejercicio 2: mayor o igual
 Definir un predicado ternario "mayor_o_igual" que relaciona dos números con el mayor de ambos, o con uno de ellos si son iguales.
 ##### Regla
 ```prolog
@@ -50,7 +54,7 @@ Z is Y,  (X<Y);
 Mayor = 11
 ```
 
-### Ejercicio 3: Paridad
+#### Ejercicio 3: Paridad
 Definir un predicado binario "paridad" que relaciona un número con la palabra "par" si el número es par, o con la palabra "impar" de otro modo
 ##### Predicado binario
 ```prolog
@@ -66,7 +70,7 @@ Par = impar
 Par = par
 ```
 
-### Ejercicio 4: Regla `cuñado_de`
+#### Ejercicio 4: Regla `cuñado_de`
 Escribir una regla para "cuñado_de" dada una base como:
 ```prolog
 esposos(ana, luis).
@@ -85,7 +89,7 @@ hermanos(M,J).
 ?- cuniado_de(juan, luis).
 true
 ```
-### Ejercicio 5: Múltiplo
+#### Ejercicio 5: Múltiplo
 Preparar un predicado binario que sea verdadero cuando sus dos sujetos sean números tales que el primero es múltiplo del segundo.
 ##### Predicado binario
 ```prolog
@@ -97,7 +101,7 @@ multiplo(X,Y):-
 ?- multiplo(4,2)
 true
 ```
-### Ejercicio 6: Múltiplo
+#### Ejercicio 6: Múltiplo
 Completar el predicado anterior para que sea verdadero si cualquiera de los números es
 múltiplo del otro.
 ##### Predicado
@@ -116,7 +120,7 @@ true
 ?- multiplo(2,4)
 false
 ```
-### Ejercicio 7: Longitudes de un triángulo
+#### Ejercicio 7: Longitudes de un triángulo
 Desarrollar un predicado ternario cuyos sujetos representan las longitudes de tres segmentos, y que sea verdadero si estos tres segmentos forman triángulo. Recordar que la suma de las longitudes de dos lados cualesquiera de un triángulo siempre debe ser mayor que
 la longitud del restante.
 ##### Predicado ternario
@@ -149,7 +153,7 @@ Comision = 50470.0
 ?- comision(50000, Comision)
 Comision = 51500.0
 ```
-### Ejercicio 9: Tiempo que tarda en llenar o vaciarse un tanque de agua
+#### Ejercicio 9: Tiempo que tarda en llenar o vaciarse un tanque de agua
 A un tanque llega agua a través de una canilla, mientras que simultáneamente desagua a través de un sumidero. La capacidad del tanque es de T litros, por la canilla llegan C litros por minuto, y por el sumidero desaguan S litros por minuto. Inicialmente el tanque tiene L litros.
 Desarrollar un predicado que vincule los valores T, C, S y L, con los minutos que tarda en llenarse o vaciarse el tanque.
 ##### Predicado
@@ -176,7 +180,7 @@ Tiempo = 80
 
 
 
-### Ejercicio 10: Hora un segundo después
+#### Ejercicio 10: Hora un segundo después
 Escribir un predicado que relacione una hora dada en horas, minutos y segundos con la hora será un segundo después.
 
 ##### Predicado
@@ -216,7 +220,7 @@ H = 12, M = 35, S = 0
 H = 12, M = 34, S = 31
 ```
 
-### Ejercicio 11: Categorizar jugadores
+#### Ejercicio 11: Categorizar jugadores
 Dados los siguientes datos sobre jugadores de basket:
 ```prolog
 cantidad_de_dobles(juan, 15).
@@ -265,3 +269,12 @@ Categoria = 'Regular'
 ?- estadisticas(pedro, Categoria).
 Categoria = 'Posible NBA'
 ```
+
+#### <a id="mas-info"></a>
+<span style="display:none;">Firma</span>
+
+---
+✍️ **Autor:** Emilio Giordano  
+🔗 Más resúmenes de Programación Declarativa en el [repositorio](https://github.com/EmilioGiordano/Programacion-Declarativa-Practica)  
+
+---
