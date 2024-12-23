@@ -129,7 +129,7 @@ Output: '(1 3 2 4)
 Ejemplo:
 
 Para la lista `(1 2 3 2 4)` y `elem = 2`:
-- Primera llamada: `(car lista)` = 1, no coincide. Se construye `(1 ... )`.
+- Primera llamada: `(car lista) = 1` , no coincide. Se construye `(1 ... )`.
 - Segunda llamada: `(car lista) = 2`, coincide. Se ignora y se procesa (3 2 4).
 - Tercera llamada: `(car lista) = 3`, no coincide. Se construye (3 ...).
 - Cuarta llamada: `(car lista) = 2`, coincide. Se ignora y se procesa (4).

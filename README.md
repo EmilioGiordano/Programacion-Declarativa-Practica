@@ -1,25 +1,36 @@
-### Bienvenido, en este repositorio encontrará material, mayormente práctico, sobre la `Programación Declarativa` en sus dos paradigmas: `Programación Lógica`(Prolog) y `Programación Funcional`(Scheme).
-### Siéntase libre de utilizar el material y distribuirlo en necesidad de quien lo necesite.
+# 📝 Programación Declarativa
+## Resumenes y prácticas
+
+Este repositorio contiene prácticas y ejercicios realizados en los lenguajes **Prolog** (programación lógica) y **Scheme** (programación funcional). Cada sección incluye materiales y enlaces a los trabajos prácticos realizados como parte del aprendizaje de estas disciplinas.  
+
+La **programación declarativa** se basa en describir *qué* debe hacer el programa en lugar de *cómo* hacerlo. Incluye dos paradigmas principales:  
+- **Programación Lógica**, que utiliza reglas y hechos para derivar conclusiones (ej., Prolog).  
+- **Programación Funcional**, que se centra en funciones y la evaluación de expresiones (ej., Scheme).  
 
 
+---
 
+## Programación Lógica: Prolog
 
-## Paradigma de Programación Lógica en Prolog
+- 📚 **[Resumen de sintaxis: Prolog](./Resumen-Sintaxis-Prolog.md)**
+- 📚 **[Listas y recursión en Prolog](./Listas-Prolog.md)**
 
-##### [Resumen de sintáxis en Prolog](./ResumenProlog.md)
-##### [Resumen de listas en Prolog](./Listas-Prolog.md)
-Ejercicios de Programación lógica hechos en Prolog
+##### Trabajos prácticos:
+- 📝 **[Trabajo Práctico 4: Secuencias en Prolog](./Prolog-Practica/GuiaPractica4.md)**  
+- 📝 **[Trabajo Práctico 5: Decisiones en Prolog](./Prolog-Practica/GuiaPractica5.md)**  
+- 📝 **[Trabajo Práctico 6: Recursión y Listas en Prolog](./Prolog-Practica/GuiaPractica6.md)**  
 
-##### [Trabajo práctico 4: Secuencias en Prolog](./Prolog-Practica/GuiaPractica4.md)
-##### [Trabajo práctico 5: Decisiones en Prolog](./Prolog-Practica/GuiaPractica5.md)
-##### [Trabajo práctico 6: Recursión y Listas en Prolog](./Prolog-Practica/GuiaPractica6.md)
+---
 
+## Programación Funcional: Scheme
+-  📚 **[Listas y recursión en Scheme](./Listas-Scheme.md)**
 
-## Paradigma de Programación Funcional en Scheme
-Ejercicios de Programación Funcional hechos en Scheme
-##### [Resumen de listas en Scheme](./Listas-Scheme.md)
+##### Trabajos prácticos:
+- 📝 **[Trabajo Práctico 7: Introducción a Programación Funcional](./Scheme-Practica/GuiaPractica7.md)**  
+- 📝 **[Trabajo Práctico 8: Recursión y Listas en Scheme/Racket](./Scheme-Practica/GuiaPractica8.md)**  
 
-#### Ejercicios de Programación Declarativa(lógica) hechos en Prolog
-##### [Trabajo práctico 7: Introducción a Programación Funcional](./Scheme-Practica/GuiaPractica7.md)
-##### [Trabajo práctico 8: Recursión y Listas en Scheme/Racket](./Scheme-Practica/GuiaPractica8.md)
+---
+✍️ **Autor:** Emilio Giordano  
+🔗 Más resúmenes de Programación Declarativa en el [repositorio](https://github.com/EmilioGiordano/Programacion-Declarativa-Practica)  
 
+---
