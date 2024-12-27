@@ -86,7 +86,7 @@ __Preguntas simples__:
 ##### A. ¿Es Carlos progenitor de Guillermo?
 
 ```prolog
-?- es_progenitor_de(carlos, luis).
+?- es_progenitor_de(carlos, guillermo).
 ```
 ##### B. ¿Es Jorge progenitor de Gonzalo?
 
