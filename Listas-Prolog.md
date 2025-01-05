@@ -43,12 +43,19 @@ Ratings = [8.8, 9.2, 8.3, 9.0, 8.9, 8.6, 8.7]
 Obtenemos una lista con las calificaciones de las peliculas.
 De esta manera, podremos aplicar reglas como Sumatoria y Longitud de una lista sobre la base de hechos definida, para luego calcular el promedio.
 
-#### Reglas longitud y sumatoria de la lista. 
+#### Reglas longitud de una lista. 
 ```prolog
 longitud([], 0). 
 longitud([_|B], X):- 
     longitud(B, N1), X is N1 + 1.
-% ------------------------------- %
+```
+##### Prueba
+```prolog
+?- longitud([1, 2, 3, a, 5],Longitud)
+Longitud = 5
+```
+#### Regla sumatoria de una lista
+```prolog
 sumatoria([], 0).    
 sumatoria([Cabeza | Resto], Suma) :-   
     sumatoria(Resto, SumaResto),  
