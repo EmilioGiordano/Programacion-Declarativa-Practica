@@ -1,7 +1,7 @@
 # 📝 Programación Declarativa
 ## Resumenes y prácticas
 
-Este repositorio contiene prácticas y ejercicios realizados en los lenguajes **Prolog** (programación lógica) y **Scheme** (programación funcional). Cada sección incluye materiales y enlaces a los trabajos prácticos realizados como parte del aprendizaje de estas disciplinas.  
+Este repositorio contiene resúmenes, prácticas y ejercicios realizados en los lenguajes **Prolog** (programación lógica) y **Scheme** (programación funcional) durante la asignatura __Programación Declarativa__ de la _Universidad Nacional de San Antonio de Areco_, 2024. Cada sección incluye materiales y enlaces a los trabajos prácticos realizados como parte del aprendizaje de estas disciplinas.  
 
 La **programación declarativa** se basa en describir *qué* debe hacer el programa en lugar de *cómo* hacerlo. Incluye dos paradigmas principales:  
 - **Programación Lógica**, que utiliza reglas y hechos para derivar conclusiones (ej., Prolog).  
